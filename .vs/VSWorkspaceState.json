@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\config",
+    "\\data",
+    "\\docs",
+    "\\scripts",
+    "\\src",
+    "\\tests"
+  ],
+  "SelectedNode": "\\src\\vectorstore.py",
+  "PreviewInSolutionExplorer": false
+}
