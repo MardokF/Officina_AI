@@ -35,9 +35,8 @@ class VectorStoreManager:
             self.pc = Pinecone(api_key=settings.PINECONE_API_KEY)
             
             # Inizializza embeddings con modello locale
-            from langchain_community.embeddings import HuggingFaceEmbeddings
-            self.embeddings = HuggingFaceEmbeddings(
-                model_name="sentence-transformers/all-MiniLM-L6-v2"
+            self.embeddings = OpenAIEmbeddings(
+            openai_api_key=settings.OPENAI_API_KEY
             )
             
             logger.info("✅ Connessione stabilita")
