@@ -9,6 +9,15 @@ from pydantic_settings import BaseSettings
 # Carica variabili d'ambiente
 load_dotenv()
 
+# Supporto per Streamlit Cloud secrets
+try:
+    import streamlit as st
+    if hasattr(st, 'secrets'):
+        # Siamo su Streamlit Cloud, usa secrets
+        os.environ.update(st.secrets)
+except:
+    pass
+
 class Settings(BaseSettings):
     """Configurazioni dell'applicazione"""
     
